@@ -1,8 +1,9 @@
 <ul class="side_nav">
     <li>
-        <a href="" class="active">Dashboard</a>
+        <a href="{{route('dashboard')}}" class="{{(request()->is('dashboard')) ? 'active' : '' }}">Dashboard</a>
     </li>
     <li>
-        <a href="">Appointment</a>
+        <a href="{{route('new-appointment')}}" class="{{(request()->is('new-appointment')) ? 'active' : '' }}">Appointment</a>
+
     </li>
 </ul>

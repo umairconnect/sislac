@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Use App\Http\Controllers\CustomAuthController;
+Use App\Http\Controllers\Appointment\NewAppointment;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -19,19 +21,18 @@ Route::get('/', function () {
 
 Route::get('/new-appointment', function () {
     return view('appointment.newAppointment');
-});
-
-
-Route::group(array('before' => 'auth'), function() {
-    Route::get('dashboard', [App\Http\Controllers\CustomAuthController::class, 'dashboard']);
-});
+})->name('new-appointment');
 
 
 
-Route::get('dashboard', [App\Http\Controllers\CustomAuthController::class, 'dashboard']);
-Route::get('logout', [App\Http\Controllers\CustomAuthController::class, 'logOut'])->name('logout');
-Route::get('login', [App\Http\Controllers\CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [App\Http\Controllers\CustomAuthController::class, 'customLogin'])->name('login.custom');
-Route::get('registration', [App\Http\Controllers\CustomAuthController::class, 'registration'])->name('register-user');
-Route::post('custom-registration', [App\Http\Controllers\CustomAuthController::class, 'customRegistration'])->name('register.custom');
 
+
+Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
+Route::get('logout', [CustomAuthController::class, 'logOut'])->name('logout');
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
+
+//Appointment
+Route::post('addappointment', [NewAppointment::class, 'addNewAppointment'])->name('addappointment');

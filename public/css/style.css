@@ -20,7 +20,21 @@ header {
 }
 .content {
     background: #F5F6FA;
-    padding: 20px 20px;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+.content h2 {
+    font-size: 22px;
+    margin: 5px 3px 15px;
+}
+.auto_details_box {
+    background: #EBF2FC;
+    padding: 15px 20px;
+    margin-top: 6px;
+    border-radius: 10px;
+}
+.auto_details_box  p{
+    margin: 0;
 }
 .detail_box {
     background: white;
@@ -38,6 +52,13 @@ header {
 }
 .detail_c p {
     margin-left: auto;
+}
+.form_box{
+    padding: 10px 15px;
+    margin: 10px 5px;
+}
+.form_box .colbox [class*="col-"] {
+    padding: 2px;
 }
 /* sidebar navigation */
 .side_nav {
@@ -71,4 +92,10 @@ header {
 }
 .login-form .btn {
     background: #377DFF;
+}
+.form-control:focus {
+    box-shadow: none !important;
+}
+.pr_40 {
+    padding-right: 40px !important;
 }
