@@ -20,7 +20,7 @@
                             <div class="row">
                                 <div class="col-lg-3">
                                     <b>Id Appointment</b>
-                                    <p><input type="hidden" name="appointmentId" value="3333" /> </p>
+                                    <p><input type="hidden" name="" /> </p>
                                 </div>
                                 <div class="col-lg-3">
                                     <b>Date</b>
@@ -51,29 +51,34 @@
                                     <div class="row colbox">
                                         <div class="col-lg-8">
                                             <label>Patient Name</label>
-                                            <input class="form-control" name="patientName" type="text">
+                                            <input class="form-control" name="patientName" type="text" required>
                                         </div>
                                         <div class="col-lg-4">
                                             <label>Sex</label>
-                                            <input class="form-control" name="patientSex" type="text">
+                                            <select name="patientSex" class="form-control" required>
+                                                <option selected disabled>Choose</option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+
                                         </div>
                                     </div>
                                     <div class="row colbox">
                                         <div class="col-lg-3">
                                             <label>Birth date</label>
-                                            <input class="form-control" name="patientDOB" type="date">
+                                            <input class="form-control" name="patientDOB" type="date" required>
                                         </div>
                                         <div class="col-lg-3">
                                             <label for="ex2">Age</label>
-                                            <input class="form-control" name="patientAge" type="text">
+                                            <input class="form-control" name="patientAge" required type="text">
                                         </div>
                                         <div class="col-lg-3">
                                             <label for="ex2">RG</label>
-                                            <input class="form-control" name="patientRG" type="text">
+                                            <input class="form-control" name="patientRG" type="text" required>
                                         </div>
                                         <div class="col-lg-3">
                                             <label>CFT</label>
-                                            <input class="form-control" name="patientCFT" type="text">
+                                            <input class="form-control" name="patientCFT" type="text" required>
                                         </div>
                                     </div>
                                 </div>
@@ -81,11 +86,11 @@
                                     <div class="row colbox">
                                         <div class="col-lg-3">
                                             <label>Zip code</label>
-                                            <input class="form-control" name="patientZipcode" type="text">
+                                            <input class="form-control" name="patientZipcode" type="text" required>
                                         </div>
                                         <div class="col-lg-9">
                                             <label>Address</label>
-                                            <input class="form-control" name="patientAddress" type="text">
+                                            <input class="form-control" name="patientAddress" type="text" required>
                                         </div>
                                     </div>
                                     <div class="row colbox">
@@ -124,15 +129,15 @@
                                          </div>
                                         <div class="col-lg-2">
                                             <label>Code</label>
-                                            <input class="form-control" name="patientName" type="text">
+                                            <input class="form-control" name="patientCode" type="text">
                                         </div>
                                         <div class="col-lg-2">
                                             <label>Health insurance</label>
-                                            <input class="form-control" name="patientCode" type="text">
+                                            <input class="form-control" name="patientHealthInsurance" type="text">
                                         </div>
                                         <div class="col-lg-3">
                                             <label>Company</label>
-                                            <input class="form-control" name="patientHealthInsurance" type="text">
+                                            <input class="form-control" name="patientCompany" type="text">
                                         </div>
                                     </div>
                                 </div>

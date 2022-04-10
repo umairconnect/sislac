@@ -19,20 +19,27 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/new-appointment', function () {
-    return view('appointment.newAppointment');
-})->name('new-appointment');
+
+
+Route::group(['middleware' => ['auth']], function() {
+
+    //Appointment
+    Route::get('/new-appointment', function () {
+        return view('appointment.newAppointment');
+    })->name('new-appointment');
+    Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
+
+    Route::post('addappointment', [NewAppointment::class, 'addNewAppointment'])->name('addappointment');
+});
 
 
 
 
 
-Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
+
 Route::get('logout', [CustomAuthController::class, 'logOut'])->name('logout');
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 
-//Appointment
-Route::post('addappointment', [NewAppointment::class, 'addNewAppointment'])->name('addappointment');
