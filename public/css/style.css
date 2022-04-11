@@ -68,6 +68,10 @@ header {
 .side_nav li {
     margin: 10px 0px;
 }
+.side_nav li i {
+    padding: 7px 2px;
+    font-size: 14px;
+}
 .side_nav a {
     text-decoration: none;
     color: #B2B2B2;
@@ -79,13 +83,20 @@ header {
 }
 .side_nav a:hover {
     background: #377DFF;
-    color:white;
+    color:white !important;
     text-decoration: none;
 }
 .side_nav a.active {
     background: #377DFF;
-    color:white;
+    color: white !important;
     text-decoration: none;
+}
+.side_nav ul {
+    list-style: none;
+    margin: 0;
+    margin-left: 3px;
+    padding-left: 0;
+    border-left: 1px solid #ebebeb;
 }
 .login-form {
    margin-top: 4%;
@@ -98,4 +109,15 @@ header {
 }
 .pr_40 {
     padding-right: 40px !important;
+}
+.sislac_table thead {
+    background:#EBF2FC;
+}
+.sislac_table thead th{
+    vertical-align: bottom;
+    border-bottom: 0px solid #dee2e6 !important;
+    box-shadow: none;
+    border-top: 0px solid !important;
+    font-weight: 500;
+    font-size: 15px;
 }

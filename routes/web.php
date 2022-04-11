@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
 
     Route::post('addappointment', [NewAppointment::class, 'addNewAppointment'])->name('addappointment');
+
+    Route::get('viewappointment', [NewAppointment::class, 'showlist'])->name('viewAppointment');
 });
 
 

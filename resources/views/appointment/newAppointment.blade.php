@@ -24,8 +24,9 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <b>Date</b>
-                                    <p><?php  echo $mytime->toDateString(); ?></p>
+                                    <p><?php  echo $mytime->toDateString();?></p>
                                     <input type="hidden" name="appointmentDate" value="<?php echo $mytime->toDateString(); ?>" />
+                                    <input type="hidden" name="appointmentTime" value="<?php echo $mytime->toTimeString(); ?>" />
                                 </div>
                                 <div class="col-lg-3">
                                     <b>Password</b>

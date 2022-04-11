@@ -9,6 +9,12 @@
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" >
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>

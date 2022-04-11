@@ -57,6 +57,8 @@ class NewAppointment extends Controller
 
         $appointment->patientcompany = $Req->patientCompany;
 
+        $appointment->appointmenttime =  $Req->appointmentTime;
+
         $appointment->save();
 
 
@@ -64,6 +66,10 @@ class NewAppointment extends Controller
         return redirect('dashboard');
 
 
+    }
+    function showlist () {
+        $appointmentdata = appointment::all();
+        return view('appointment.viewAppointment', ['appointment'=>$appointmentdata]);
     }
 
 }
