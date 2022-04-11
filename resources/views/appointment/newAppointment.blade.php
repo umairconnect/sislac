@@ -1,4 +1,4 @@
-@extends('Welcome')
+@extends('welcome')
 @section('title', 'Appointment')
 
 @section('content')

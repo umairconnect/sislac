@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Use App\Http\Controllers\CustomAuthController;
 Use App\Http\Controllers\Appointment\NewAppointment;
+Use App\Http\Controllers\Patient\PatientAdd;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -32,6 +33,16 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('addappointment', [NewAppointment::class, 'addNewAppointment'])->name('addappointment');
 
     Route::get('viewappointment', [NewAppointment::class, 'showlist'])->name('viewAppointment');
+
+    //patient
+    Route::get('/new-patient', function () {
+        return view('patient.newPatient');
+    })->name('new-patient');
+    Route::post('addpatient', [PatientAdd::class, 'addNewPatient'])->name('addpatient');
+
+    Route::get('viewpatient', [PatientAdd::class, 'showPatientList'])->name('viewpatient');
+
+
 });
 
 

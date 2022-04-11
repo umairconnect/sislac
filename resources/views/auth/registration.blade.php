@@ -1,7 +1,6 @@
-@extends('Welcome')
-@section('title', 'Register')
+@extends('layout/webheader')
+@section('title', 'Dashboard')
 
-@section('content')
     <main class="signup-form">
         <div class="cotainer">
             <div class="row justify-content-center">
@@ -47,4 +46,3 @@
             </div>
         </div>
     </main>
-@endsection

@@ -26,11 +26,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($appointment as $appoint)
+                        @foreach($Patient as $Patients)
                             <tr>
-                                <td>{{$appoint['id']}} </td>
-                                <td>{{$appoint['appointmentdate']}}</td>
-                                <td>{{$appoint['patientname']}}</td>
+                                <td>{{$Patients['id']}} </td>
+                                <td>{{$Patients['PatientName']}}</td>
+                                <td>{{$Patients['BirthDate']}}</td>
                                 <td>Solicitação do Cliente</td>
                                 <td>Confirm</td>
                                 <td>Pending</td>

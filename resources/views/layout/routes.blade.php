@@ -14,5 +14,15 @@
 
         </ul>
     </li>
+
+    <li>
+        <a class="{{(request()->is('new-patient')) ? 'active' : '' }}"><i class="fa fa-calendar"></i> Patient</a>
+
+        <ul class="" id="homeSubmenu">
+            <li><a href="{{route('new-patient')}}" >New Patient</a></li>
+            <li><a href="{{route('viewAppointment')}}">View Patient</a></li>
+
+        </ul>
+    </li>
 </ul>
 </nav>

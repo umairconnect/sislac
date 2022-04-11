@@ -57,8 +57,29 @@ header {
     padding: 10px 15px;
     margin: 10px 5px;
 }
+.form_box label {
+    font-size: 15px;
+    font-weight: 500;
+}
 .form_box .colbox [class*="col-"] {
     padding: 2px;
+}
+.form_box input {
+    border: 0px solid #f1f3f5;
+    background: #FAFBFC;
+    border-radius: 0;
+}
+.form_box input:focus {
+    border: 1px solid #f1f3f5;
+    background: #FAFBFC;
+}
+.form_box select {
+    border: 0px solid #f1f3f5;
+    background: #FAFBFC;
+    border-radius: 0;
+}
+.form_box select:focus {
+    background: #FAFBFC;
 }
 /* sidebar navigation */
 .side_nav {
