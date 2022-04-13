@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 Use App\Http\Controllers\CustomAuthController;
 Use App\Http\Controllers\Appointment\NewAppointment;
-Use App\Http\Controllers\Patient\PatientAdd;
+Use App\Http\Controllers\Patient\PatientData;
+Use App\Http\Controllers\Doctor\DoctorData;
+
 
 Route::get('/', function () {
     return view('auth.login');
@@ -38,10 +40,16 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/new-patient', function () {
         return view('patient.newPatient');
     })->name('new-patient');
-    Route::post('addpatient', [PatientAdd::class, 'addNewPatient'])->name('addpatient');
+    Route::post('addpatient', [PatientData::class, 'addNewPatient'])->name('addpatient');
 
-    Route::get('viewpatient', [PatientAdd::class, 'showPatientList'])->name('viewpatient');
+    Route::get('viewpatient', [PatientData::class, 'showPatientList'])->name('viewpatient');
 
+   //Doctors
+    Route::get('/new-doctor', function () {
+        return view('doctor.newDoctor');
+    })->name('newDoctor');
+    Route::post('addDoctor', [DoctorData::class, 'addNewDoctor'])->name('addDoctor');
+    Route::get('viewdoctor', [DoctorData::class, 'showDoctorList'])->name('viewdoctor');
 
 });
 

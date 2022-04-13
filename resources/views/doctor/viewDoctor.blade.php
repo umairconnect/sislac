@@ -6,7 +6,7 @@
     <div class="content">
         <div class="row">
             <div class="col-lg-12">
-                <h2>View Patient</h2>
+                <h2>View Doctor</h2>
             </div>
         </div>
 
@@ -18,26 +18,23 @@
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
-                            <th>CPF</th>
+                            <th>CRM</th>
                             <th>Phone</th>
-                            <th>Social Name</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>Email</th>
+                            <th>Specialty</th>
+
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($Patient as $Patients)
+                        @foreach($Doctor as $doctors)
                             <tr>
-                                <td>{{$Patients['id']}} </td>
-                                <td>{{$Patients['PatientName']}}</td>
-                                <td>{{$Patients['CPF']}}</td>
-                                <td>{{$Patients['Phone']}}</td>
-                                <td>{{$Patients['SocialName']}}</td>
-                                <td>Pending</td>
-                                <td>
-                                    <i class="fa fa-pencil"></i>
-                                    <i class="fa fa-trash"></i>
-                                </td>
+                                <td>{{$doctors['id']}} </td>
+                                <td>{{$doctors['DoctorName']}}</td>
+                                <td>{{$doctors['DoctorCRM']}}</td>
+                                <td>{{$doctors['DoctorPhone']}}</td>
+                                <td>{{$doctors['DoctorEmail']}}</td>
+                                <td>{{$doctors['DoctorSpecialty']}}</td>
+
 
 
                             </tr>
