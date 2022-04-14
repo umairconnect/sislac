@@ -29,7 +29,7 @@
         <a class="{{(request()->is('new-doctor')) ? 'active' : '' }}"><i class="fa fa-calendar"></i> Doctor</a>
         <ul class="" id="homeSubmenu">
             <a href="{{route('newDoctor')}}">New doctor</a>
-            <a href="{{route('newDoctor')}}">View Doctor</a>
+            <a href="{{route('viewdoctor')}}">View Doctor</a>
         </ul>
     </li>
 </ul>

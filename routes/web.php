@@ -51,6 +51,11 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('addDoctor', [DoctorData::class, 'addNewDoctor'])->name('addDoctor');
     Route::get('viewdoctor', [DoctorData::class, 'showDoctorList'])->name('viewdoctor');
 
+    //Exam
+    Route::get('/listexam', function () {
+        return view('exam.examlist');
+    });
+
 });
 
 

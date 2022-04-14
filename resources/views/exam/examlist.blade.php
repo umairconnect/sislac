@@ -2,11 +2,10 @@
 @section('title', 'Appointment')
 
 @section('content')
-
     <div class="content">
         <div class="row">
             <div class="col-lg-12">
-                <h2>View Doctor</h2>
+                <h2>List Exam</h2>
             </div>
         </div>
 
@@ -16,7 +15,7 @@
                     <table class="table sislac_table">
                         <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>Abbreviation</th>
                             <th>Name</th>
                             <th>CRM</th>
                             <th>Phone</th>
@@ -26,33 +25,18 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($Doctor as $doctors)
-                            <tr>
-                                <td>{{$doctors['id']}} </td>
-                                <td>{{$doctors['DoctorName']}}</td>
-                                <td>{{$doctors['DoctorCRM']}}</td>
-                                <td>{{$doctors['DoctorPhone']}}</td>
-                                <td>{{$doctors['DoctorEmail']}}</td>
-                                <td>{{$doctors['DoctorSpecialty']}}</td>
+                            <th>
+                                <textarea id="summery-ckeditor"></textarea>
 
-
-
-                            </tr>
-
-                        @endforeach
-
+                            </th>
                         </tbody>
-
                     </table>
                 </div>
             </div>
         </div>
-
-
-
-
-
-    </div>
+        <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+        <script>
+            CKEDITOR.replace('summery-ckeditor')
+        </script>
 
 @endsection
-
